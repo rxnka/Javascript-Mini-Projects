@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+    <title>Javascript Tasks</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="http://npmcdn.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
+    <script src="ContactFormValidation.js" async></script>
+    <script src="Date.js" async></script>
+    <script src="LinksSelector.js" async></script>
+    <script src="SeparateUrl.js" async></script>
+    <script src="overload.js" async></script>
+    <script src="Array.js" async></script>
+    <script src="Object.js" async></script>
+    <script src="DaysUntilChristmas.js" async></script>
+    <script src="Calculator.js" async></script>
+    <script src="Reverse.js" async></script>
+    <script src="ToDo.js" async></script>
+    <script src="SearchBox.js" async></script>
+    <script src="Tabs.js" async></script>
+    <script src="Modal.js" async></script>
+    <script src="Isotope.js" async></script>
+    <script src="FilterTabs.js" async></script>
+    <link rel="stylesheet" href="css3.css">
+</head>
+
+<body>
+    <!--Validation with JavaScript -->
+    <section class=" container-fluid mb-5">
+        <form class="shadow p-3 mb-5 bg-white form-all rounded col-lg-6 mx-auto my-5 pt-5" method="post"
+            action="javascript:simpleCart.checkout()" name="form">
+            <div class="container mx-auto">
+                <h2 class="text-center">Contact Form Validation</h2>
+                <div class="row mt-5">
+                    <div class="col-md-6 mt-3">
+                        <div class="md-form mb-0 ">
+                            <label for="fname" class="font-weight-bold">FirstName</label>
+                            <input type="text" id="fname" name="fname" class="form-control" oninput="firstname()"
+                                placeholder="John">
+                            <p id="firtPara" style="margin-bottom: 0px;"></p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mt-3">
+                        <div class="md-form mb-0 ">
+                            <label for="lname" class="font-weight-bold">LastName</label>
+                            <input type="text" id="lname" name="lname" class="form-control" oninput="lastname()"
+                                placeholder="Doe">
+                            <p id="lastPara" style="margin-bottom: 0px;"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="subject mt-4 ">
+                    <label for="email" class="font-weight-bold">E-mail</label>
+                    <input type="text" name="email" class="form-control" id="email" oninput="emailFunc()"
+                        placeholder="example@example.com">
+                    <p id="emailPara" style="margin-bottom: 0px;"></p>
+                </div>
+                <div class="mt-5">
+                    <label for="phone" class="font-weight-bold">PhoneNumber</label>
+                    <input class="form-control" name="phone" id="phone" oninput="phoneN()" placeholder="###-###-###">
+                    <p id="phonePara" style="margin-bottom: 0px;"></p>
+                </div>
+                <div class="mt-5">
+                    <label class="mr-5 font-weight-bold">Gender</label>
+                    <input type="radio" id="male" name="gender" value="male" onclick="radioGender()">
+                    <label for="male" class="mr-5">Male</label>
+                    <input type="radio" id="female" name="gender" value="female" onclick="radioGender()">
+                    <label for="female">Female</label>
+                    <p id="gendPara" style="margin-bottom: 0px;"></p>
+                </div>
+                <div class="col-lg-12 text-right contact-button mt-1">
+                    <input type="submit" class="btn btn-secondary my-4 px-5 py-2 font-weight-bold" value="Submit"
+                        id="myBtn">
+                </div>
+            </div>
+        </form>
+    </section>
+
+    <section class="pt-5 container row mx-auto">
+        <div class="col-md-4 text-center my-5">
+            <h5 class="mb-3">Date and time</h5>
+            <p id="time"></p>
+            <p id="moment"></p>
+        </div>
+        <div class="col-md-4 text-center my-5">
+            <h5 class="mb-3">Select all links and show it in the console</h5>
+            <a href="https://developer.mozilla.org/en-US/">MDN</a><br>
+            <a href="https://www.youtube.com/">Youtube</a><br>
+            <a href="https://github.com/rxnka">GitHub</a><br>
+            <a href="https://www.google.com/">Google</a><br>
+            <a href="https://mail.google.com/mail/u/0/#inbox">Gmail</a><br>
+        </div>
+        <div class="col-md-4 text-center my-5">
+            <h5 class="mb-3">Saparate a url</h5>
+            <p id="complete"></p>
+            <p id="mail"></p>
+        </div>
+    </section>
+    <section class="pt-5 container row mx-auto">
+        <div class="col-md-4 text-center my-5">
+            <h5>Overload Your Browser</h5>
+            <p>If you want to start the infinite loop click the button and you can watch the infinite loop in the
+                console</p>
+            <button onclick="infinite()" class="btn btn-danger">Click here</button>
+
+        </div>
+        <div class="col-md-4 text-center my-5">
+            <h5>Array</h5>
+            <p id="array"></p>
+            <p>Watch the console for the results</p>
+        </div>
+        <div class="col-md-4 text-center my-5">
+            <h5>Object</h5>
+            <p>The before array with objects is shown in the console</p>
+            <p id="map"></p>
+        </div>
+    </section>
+    <section class="pt-5 container row mx-auto">
+        <div class="col-md-4 text-center my-5">
+            <h5>Christmas</h5>
+            <p id="christmas"></p>
+        </div>
+        <div class="col-md-4 text-center my-5">
+            <h5>Calculator</h5>
+            <div class="md-form mb-0 mb-3">
+                <label for="inputOne" class="font-weight-bold">FirstNumber</label>
+                <input id="inputOne" type="text" name="inputOne" class="form-control" oninput="inputUno()">
+                <p id="oneIPara" style="margin-bottom: 0px;"></p>
+            </div>
+            <div class="md-form mb-0 mb-4">
+                <label for="inputTwo" class="font-weight-bold">SecondNumber</label>
+                <input name="inputTwo" id="inputTwo" type="text" class="form-control" oninput="inputDos()">
+                <p id="twoIPara" style="margin-bottom: 0px;"></p>
+            </div>
+            <button class="btn btn-success" id="add"> + </button>
+            <button class="btn btn-outline-success" id="sub"> - </button>
+            <button class="btn btn-success" id="multi"> x </button>
+            <button class="btn btn-outline-success" id="divis"> / </button>
+            <p id="result"></p>
+        </div>
+        <div class="col-md-4 text-center my-5">
+            <h5>Reverse</h5>
+            <div class="md-form mb-0 mb-3">
+                <label for="reverse" class="font-weight-bold">Reverse paragraph</label>
+                <input id="reverse" type="text" name="reverse" class="form-control">
+                <button class="btn btn-info my-3" onclick="reverseParagraph()">Click here to see the reverse
+                    forms</button>
+                <p id="revPara1" style="margin-bottom: 0px;"></p>
+                <p id="revPara2"></p>
+            </div>
+        </div>
+    </section>
+    <section class="pt-5 container mx-auto">
+        <h5 class="text-center mb-3">To Do List</h5>
+        <div class="md-form mb-0 mb-3">
+            <label for="todoTask" class="font-weight-bold">New Tasks</label>
+            <div class="row text-center">
+                <input id="todoTask" type="text" name="todoTask" class="form-control col-md-9 mt-3">
+                <div class="text-center mt-3 col-md-3">
+                    <button class="btn btn-outline-dark px-5" onclick="addtodo()"> Add task </button>
+                </div>
+            </div>
+            <p id="taskPara"></p>
+        </div>
+        <div class="row" id="alltasks">
+            <div id="taskCheck" class="my-4 mb-5 col-md-6">
+                <h5 class="text-center font-weight-bold pb-5">All tasks will show down here</h5>
+            </div>
+            <div id="completetasks" class="my-4 mb-5 col-md-6">
+                <h5 class="text-center font-weight-bold pb-5">Completed tasks</h5>
+
+            </div>
+        </div>
+    </section>
+    <section class="pt-5 container mx-auto">
+        <h5 class="text-center mb-4">Search Box</h5>
+        <div class="input-group mb-4">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-default"><i class="fas fa-search"></i></span>
+            </div>
+            <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default"
+                placeholder="Search for a Continent" id="searchInp"
+                onkeyup="searchBox()">
+        </div>
+        <div id="allArray">
+        </div>
+    </section>
+    <section class="pt-5 container mx-auto text-center">
+        <h5 class="mb-4">Tabs with JS</h5>
+        <div class="row kengtar">
+            <div class="text-center col-md-4">
+                <p onclick="tabsHalsey()" id="halsey">Halsey</p>
+            </div>
+            <div class="text-center col-md-4">
+                <p onclick="tabsNf()" id="nf">NF</p>
+            </div>
+            <div class="float center col-md-4">
+                <p onclick="tabsAlec()" id="alec">Alec Benjamin</p>
+            </div>
+        </div>
+        <div class="row kengtarSm">
+            <div class="text-center col-md-4">
+                <p onclick="caroselHalsey()" id="halseysm">Halsey</p>
+                <div id="halseyContent">
+
+                </div>
+            </div>
+            <div class="text-center col-md-4">
+                <p onclick="caroselNf()" id="nfsm">NF</p>
+                <div id="nfContent">
+
+                </div>
+            </div>
+            <div class="float center col-md-4">
+                <p onclick="caroselAlec()" id="alecsm">Alec Benjamin</p>
+                <div id="alecContent">
+
+                </div>
+            </div>
+        </div>
+        <div id="content" class="pb-5 pt-4">
+        </div>
+    </section>
+    <section class="py-5 container mx-auto text-center ">
+        <h5 class="mb-4">Modal Box</h5>
+        <button class="btn btn-outline-warning" id="modalBtn">Click here to show the modal</button>
+        <div id="modal">
+            <div class="modal-cont">
+                <div id="modal-head" class="pb-4 col-lg-12">
+                    <span class="close modalclose font-weight-bold">&times;</span>
+                </div>
+                <div id="modal-text">
+                    <h4 class="mb-4">Nice picture</h4>
+                    <img src="img/person.jpg" class="mb-5 imgpers">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="py-5 container mx-auto text-center ">
+        <h5 class="mb-5">Isotope Filter</h5>
+        <div class="row mx-auto col-md-12 col-lg-6" id="click">
+            <div class="col-4">
+                <div class="design">
+                    <p data-filter="*" id="all" class="active">Show all</p>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="design">
+                    <p data-filter=".drink" id="drinks">Drinks</p>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="design">
+                    <p data-filter=".food" id="food">Food</p>
+                </div>
+            </div>
+        </div>
+        <div class="row text-center mt-5" id="FandD">
+            <div class="col-md-4 food fandd">
+                <img src="img/ham.png" class="img-fluid mb-4">
+                <h4>Hamburger</h4>
+            </div>
+            <div class="col-md-4 drink fandd">
+                <img src="img/cola.png" class="img-fluid mb-4">
+                <h4>Coca Cola</h4>
+            </div>
+            <div class="col-md-4 drink fandd">
+                <img src="img/vaserr.png" class="img-fluid mb-4">
+                <h4>Water</h4>
+            </div>
+            <div class="col-md-4 food fandd">
+                <img src="img/piz.jpg" class="img-fluid mb-4">
+                <h4>Pizza</h4>
+            </div>
+            <div class="col-md-4 drink fandd">
+                <img src="img/or.gif" class="img-fluid mb-4">
+                <h4>Orange drink</h4>
+            </div>
+            <div class="col-md-4 food fandd">
+                <img src="img/ta.png" class="img-fluid mb-4">
+                <h4>Taco</h4>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+
+</html>
