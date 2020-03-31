@@ -1,6 +1,6 @@
 # Javascript-Mini-Projects
 
-Here is used HTML CSS BOOTSTRAP and Javascript.
+Here is used HTML, CSS, BOOTSTRAP and Javascript.
 This are mini Tasks to learn JavaScript.
 Go to https://validcontact.netlify.com/ and see how all of this Tasks work
 
